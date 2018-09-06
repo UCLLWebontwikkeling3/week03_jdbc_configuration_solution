@@ -24,7 +24,7 @@ public class Controller extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String destination = showCountries(request, response);
-		
+
 		RequestDispatcher view = request.getRequestDispatcher(destination);
 		view.forward(request, response);		
 	}

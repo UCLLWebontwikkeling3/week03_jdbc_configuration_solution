@@ -11,7 +11,7 @@
 <title>Countries</title>
 </head>
 <body>
-	<%@include file="header.jspf"%>
+	<jsp:include page="header.jsp"/>
 
 	<main id="container">
 	 <jsp:include page="title.jsp">
