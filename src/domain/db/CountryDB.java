@@ -9,7 +9,7 @@ import java.util.Properties;
 
 public class CountryDB {
     private Properties properties = new Properties();
-    private String url = "jdbc:postgresql://databanken.ucll.be:51718/lector?currentSchema=web3";
+    private String url = "jdbc:postgresql://databanken.ucll.be:51819/webontwerp?currentSchema=web3";
 
     public CountryDB() {
         properties.setProperty("user", "r123456");
@@ -17,6 +17,7 @@ public class CountryDB {
         Secret.setPass(properties);
         properties.setProperty("ssl", "true");
         properties.setProperty("sslfactory", "org.postgresql.ssl.NonValidatingFactory");
+        properties.setProperty("sslmode","prefer");
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
