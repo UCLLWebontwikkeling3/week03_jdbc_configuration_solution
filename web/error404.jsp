@@ -12,7 +12,7 @@
     <jsp:include page="title.jsp">
         <jsp:param name="title" value="Something is Wrong"/>
     </jsp:include>
-    <p>Sorry, we couldn't find the requeste page (404 error).</p>
+    <p>Sorry, we couldn't find the requested page (404 error).</p>
     <p>Go <a href="index.html">home</a>.</p>
 </main>
 </body>
