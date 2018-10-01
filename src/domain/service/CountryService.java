@@ -1,12 +1,13 @@
 package domain.service;
 
 import domain.db.CountryDB;
+import domain.db.CountryDBSQL;
 import domain.model.Country;
 
 import java.util.List;
 
 public class CountryService {
-	private CountryDB db = new CountryDB();
+	private CountryDB db = new CountryDBSQL();
 	
 	public void addCountry(Country country){
 		db.add(country);
@@ -16,9 +17,6 @@ public class CountryService {
 		return db.getAll();
 	}
 	
-	public void create(String name){
-		addCountry(new Country(name));
-	}
 
 	public Country getMostPopularCountry() {
 		int highestVotes = -1;
